@@ -31,19 +31,25 @@
     <a href="http://trustsunlimitedllc.com/" target="_blank">http://trustsunlimitedllc.com</a>&nbsp;&nbsp;
     <a href="http://masterstrust.com/" target="_blank">http://masterstrust.com/</a>&nbsp;&nbsp;
     <a href="http://postrv.net/" target="_blank">http://postrv.net/</a>&nbsp;&nbsp;
-
-<hr>    
+</div>
+ 
+<div id="myDIV-Hide">
+    <br><br><br>
 </div>
     
+<hr>     
 
 <script src=js/app.js></script>
 <script>
     function myFunction() {
         var x = document.getElementById("myDIV");
+        var y = document.getElementById("myDIV-Hide");
         if (x.style.display === "none") {
             x.style.display = "block";
+            y.style.display = "none";
         } else {
             x.style.display = "none";
+            y.style.display = "block";
         }
     }
 </script>

@@ -65,7 +65,7 @@ ul#nav{
 	}
 	
 	ul#nav a:hover{
-		background-color:#000;
+		background-color:yellow;
 		color:#fff;	
 		-webkit-transition: all 1s ;
 		-moz-transition: all 1s ;

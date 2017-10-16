@@ -1,5 +1,6 @@
 body {
-	background-color:#c0c0c0;
+	background-color:powderblue;
+    text-align: center;
 	font-family:"Lucida Sans", Arial, Helvetica, sans-serif;
 }
 
@@ -65,8 +66,8 @@ ul#nav{
 	}
 	
 	ul#nav a:hover{
-		background-color:yellow;
-		color:darkgreen;	
+		background-color:white;
+		color:black;	
 		-webkit-transition: all 1s ;
 		-moz-transition: all 1s ;
 		-o-transition: all 1s ;

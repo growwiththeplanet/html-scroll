@@ -18,7 +18,7 @@ nav ul {
 nav ul li {
     float: left;
     border: 1px solid #878E63;
-    width: 15%;
+    width: 12%;
 }
 nav ul li a {
     backface-visibility: navajowhite;

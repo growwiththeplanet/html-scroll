@@ -32,7 +32,7 @@ nav ul li a {
 }
 nav ul li a:hover, nav ul li.active a {
     background-color: #878E63;
-    color: navajowhite;
+    color: red;
 }
 
 .banner img{

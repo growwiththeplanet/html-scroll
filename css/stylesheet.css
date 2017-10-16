@@ -31,46 +31,13 @@ nav ul li a {
 }
 nav ul li a:hover, nav ul li.active a {
     background-color: #878E63;
-    color:#F1F0o1;
+    color: #F1F0O1;
 }
 
 .banner img{
     width: 100%;
     border-top: 1px solid #878E63;
     border-bottom: 1px solid #878E63;
-}
-
-section#content h1{
-	font-size:28px;
-	color:#434343;
-	font-weight:normal;
-}
-
-section#content h2{
-	font-size:22px;
-	color:#434343;
-	font-weight:normal;
-}
-
-section#content h3{
-	font-size:18px;
-	color:#434343;
-}
-
-section#content p,
-section#content li,
-section#content a{
-	font-size:14px;
-	line-height:24px;
-}
-
-section#content a{
-	color:green;
-	text-decoration:none;
-}
-	
-	section#content a:hover{
-	text-decoration:underline;
 }
 	
 footer{
@@ -80,15 +47,6 @@ footer{
 	height:60px;
 }
 
-	footer p{
-		font-size:14px;
-		color:#4d711a;
-		margin-top:25px;
-	}
-	
-	footer img{
-		border:0px;
-	}
 
 /* ==== Custom Styles ==== */
 
@@ -96,4 +54,27 @@ footer{
 	box-shadow: 0px 0px 10px #555555;
 	padding:5px;
 	margin:5px;
-|
+
+/* ==== MEDIA Querys!!! ==== */
+@media screen and (max-width: 478px){
+    body {
+        font-size: 13px;
+    }
+}
+@media screen and (max-width: 740px){  
+    nav {
+        width: 100%;
+        margin-bottom: 10px;
+
+    }
+    nav ul {
+        list-style: none;
+        margin: 0 auto;
+        padding-left: 0;  
+    }
+    nav ul li {
+        text-align: center;
+        margin-left: 0 auto;
+        width: 100%;
+    }
+} 

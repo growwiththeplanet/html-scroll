@@ -35,7 +35,7 @@ nav ul li a:hover {
     color: antiquewhite;
 }
 nav ul li.active a {
-    background-color: lightgreen;
+    background-color: #878E63;
     color: antiquewhite;
 }
 .banner img{

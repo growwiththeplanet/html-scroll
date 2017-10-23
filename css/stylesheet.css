@@ -43,7 +43,14 @@ nav ul li.active a {
     border-top: 1px solid #878E63;
     border-bottom: 1px solid #878E63;
 }
-	
+button {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
 footer{
 	background-color: #878E63;
 	padding:15px;

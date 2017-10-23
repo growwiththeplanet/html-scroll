@@ -44,7 +44,7 @@ nav ul li.active a {
     border-bottom: 1px solid #878E63;
 }
 button {
-    background-color: Transparent;
+    background-color: azure;
     background-repeat:no-repeat;
     border: none;
     cursor:pointer;

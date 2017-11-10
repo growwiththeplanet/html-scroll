@@ -1,0 +1,78 @@
+Docker Secrets
+
+This application uses Docker secrets to secure the application components. The reverse proxy requires creating a certificate that is stored as a secret and the payment also requires a password stored as a secret. To create a certificate and add as a secret:
+
+mkdir certs
+
+openssl req -newkey rsa:4096 -nodes -sha256 -keyout certs/domain.key -x509 -days 365 -out certs/domain.crt
+docker secret create revprox_cert certs/domain.crt
+docker secret create revprox_key certs/domain.key
+docker secret create postgres_password certs/domain.key
+
+To create a secret for staging the payment gateway:
+echo staging | docker secret create staging_token - 
+
+Run as an application
+To run the AtSea shop as an application:
+
+docker-compose up --build
+
+
+Deploy to a swarm
+
+#If you need to create a Swarm
+docker swarm init
+docker stack deploy -c docker-stack.yml atsea
+
+A simplified development environment
+This compose file creates a simplified development environment consisting of only the application server and the database.
+
+docker-compose --file docker-compose-dev.yml up --build
+
+The AtSea Shop
+
+The URL for the content is http://localhost:8080/
+
+Run as an application
+docker-compose up --build
+docker-compose down
+docker-compose start
+docker-compose stop
+docker-compose logs
+
+
+Steps to Create Swarm
+
+docker swarm init
+ssh node-2; docker swarm join node-1:2377
+ssh node-3; docker swarm join node-1:2377
+docker node ls
+docker service create --name (new_service_name) -p 8080:8080 (image_name)
+docker service create --name my_appserver -p 8080:8080 avuthu/atsea_appserver
+docker service ls
+docker service ps my_appserver
+docker service scale my_appserver=6
+docker service ps my_appserver
+docker service update my_appserver --image avuthu/atsea_appserver:v2
+docker service update my_appserver --image avuthu/atsea_appserver:v3 --update-parallelism 2 --update-delay 30s
+or
+docker stack deploy -c docker-stack.yml atsea
+docker stack services atsea
+docker service ls
+docker service scale atsea_appserver=3
+docker service ps atsea_appserver
+
+Usage:	docker service COMMAND
+Manage services
+Commands:
+  create      Create a new service
+  inspect     Display detailed information on one or more services
+  logs        Fetch the logs of a service or task
+  ls          List services
+  ps          List the tasks of one or more services
+  rm          Remove one or more services
+  rollback    Revert changes to a service's configuration
+  scale       Scale one or multiple replicated services
+  update      Update a service
+  
+  
